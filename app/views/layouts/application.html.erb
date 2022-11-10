@@ -10,7 +10,18 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
+
+
   <body>
+  <nav class="navbar navbar-dark bg-dark ml-1">
+  <div class="container mr-3" >
+  <a class="navbar-brand" href="">
+    <img src="https://cdn-icons-png.flaticon.com/512/1996/1996068.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    Movies!
+  </a>
+  <h2><%= link_to "Add new Movie", new_list_path(@list) , class: 'btn btn-light'%></h2>
+  </div>
+  </nav>
     <%= yield %>
   </body>
 </html>

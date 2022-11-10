@@ -1,0 +1,13 @@
+<div class="card-product">
+  <img class="card-img-top"
+  <%list.bookmarks.each do |bookmark| %>
+  src= '<%=bookmark.movie.poster_url%>'
+<% end %>
+  alt="Card image cap">
+  <div class="card-product-infos">
+    <h2><%= link_to list.name,  list_path(list), style: 'color: gray;text-decoration:none;' %></h2>
+  </div>
+</div>
+
+
+src=<%=bookmark.movie.poster_url%>

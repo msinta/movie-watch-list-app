@@ -1,0 +1,16 @@
+<div class="container mr-md-3 mt-3" >
+
+  <div class="cards">
+
+    <% @lists.each do |list| %>
+      <div class="card-product">
+          <%list.bookmarks.find do |bookmark| %>
+          <img class="card-img-top" src=<%=bookmark.movie.poster_url%>  alt="Card image cap">
+        <% end %>
+        <h2><%= link_to list.name,  list_path(list), style: 'color: gray;text-decoration:none;' %></h2>
+         </div>
+        <% end %>
+
+      </div>
+
+</div>

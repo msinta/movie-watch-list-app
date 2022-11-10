@@ -1,0 +1,23 @@
+<%= link_to '<- Back', lists_path, class: 'btn btn-light'  %>
+
+<div class="container mr-md-3 mt-3" >
+
+  <div class="d-flex mr-2 pr-3 gap-3">
+   <h2><%= link_to "Add new Bookmark",  new_list_bookmark_path(@list) , class: 'btn btn-dark'%></h2>
+
+  <% @list.bookmarks.each do |bookmark| %>
+      <div class="card-product">
+          <img class="card-img card" src=<%=bookmark.movie.poster_url%>  alt="Card image cap">
+
+        <div class="card-product-infos">
+          <h5 class="card-title"><%= bookmark.movie.title %></h5>
+          <p class="card-text"><%= bookmark.movie.rating  %></p>
+          <p class="card-text"><%= bookmark.movie.overview %></p>
+          <p class="card-text"><small class="text-muted"><%=bookmark.comment%></small></p>
+           <h4><%= link_to "delete?",  delete_bookmark_path(bookmark), data: { turbo_method: 'delete', turbo_confirm: "Delete #{bookmark.movie.title}?" }, class: 'btn btn-dark'%></h4>
+        </div>
+        </div>
+  <% end %>
+      </div>
+    </div>
+</div>
