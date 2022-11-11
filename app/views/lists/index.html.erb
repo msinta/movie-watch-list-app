@@ -5,14 +5,13 @@
 <% @lists.each do |list| %>
       <div class="card-product" data-tilt data-tilt-glare data-tilt-max-glare="0.8" scale:1>
           <img class="card-img-top" src=<%=list.photo.attached? ? cl_image_path(list.photo.key) : (list.bookmarks.first ? list.bookmarks.first.movie.poster_url : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQDYau3Hs4-xw1i8jVSUY4BlF4FLmg8lQqg&usqp=CAU') %>  alt="Card image cap">
-        <h2 class ><%= link_to list.name,  list_path(list), style: 'color: gray;text-decoration:none;' %></h2>
+        <%= link_to delete_list_path(list), data: { turbo_method: 'delete', turbo_confirm: "Delete #{list.name}?" }, class: 'card-remove-link' do %>
+          <i class="fa-regular fa-trash-can"></i></h2>
+        <% end %>
+        <h2><%= link_to list.name,  list_path(list), style: 'color: gray;text-decoration:none; ;' %></h2>
          </div>
         <% end %>
       </div>
-
-
-</div>
-
 
 
 </div>

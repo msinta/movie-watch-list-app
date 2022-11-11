@@ -5,16 +5,36 @@
   border-radius: 10px;
 }
 
-.card-product > img {
-  height: 30vh ;
-  width: 60vh ;
-  object-fit:fill;
+.card {
+  height: fit-content;
+  width: 400px;
 }
+.card-product > img {
+  height: 300px ;
+  width: 100% ;
+  object-fit:cover;
+}
+
+.card-back{
+  display:flex;
+  flex-direction: column;
+  background-color: white;
+  border: 1px solid lightgray;
+  height: 100%;
+  width: 350px;
+  margin: 5px;
+  padding: 0;
+  .card-back-body{
+    padding: 20px;
+  }
+}
+
+
 
 .card-img {
   height: 350px ;
   width: 100% ;
-  object-fit:fill;
+  object-fit:cover;
 }
 
 
@@ -47,6 +67,32 @@
   width: 40px;
 }
 
+.card-remove-link {
+  color: white;
+  border-radius: 50%;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  opacity: 0.8;
+  font-weight: lighter;
+  &:hover {
+    color: white;
+    text-decoration: none;
+    opacity: 1;
+  }
+}
+
+.cards-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -75,14 +121,14 @@
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .cards {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
   .cards {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
