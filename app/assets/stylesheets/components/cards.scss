@@ -6,14 +6,22 @@
 }
 
 .card-product > img {
-  height: 200px;
-  width: 100%;
-  object-fit: cover;
+  height: 30vh ;
+  width: 60vh ;
+  object-fit:fill;
 }
 
+.card-img {
+  height: 30vh ;
+  width: 100% ;
+  object-fit:fill;
+}
+
+
 .card-product h2 {
-  font-size: 16px;
+  font-size: 24px;
   font-weight: bold;
+  text-align: center;
   margin: 0;
 }
 

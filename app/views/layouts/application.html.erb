@@ -8,6 +8,7 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <script src = "../../javascript/controllers/vanilla-tilt.js"></script>
   </head>
 
 
@@ -17,9 +18,11 @@
   <div class="container mr-3" >
   <a class="navbar-brand" href="">
     <img src="https://cdn-icons-png.flaticon.com/512/1996/1996068.png" width="30" height="30" class="d-inline-block align-top" alt="">
-    Movies!
+    Movies
   </a>
-  <h2><%= link_to "Add new Movie", new_list_path(@list) , class: 'btn btn-light'%></h2>
+  <h2><%= link_to "Add new List", new_list_path(@list) , class: 'btn btn-light'%></h2>
+
+
   </div>
   </nav>
     <%= yield %>

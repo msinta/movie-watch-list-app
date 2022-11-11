@@ -3,7 +3,7 @@
   <%list.bookmarks.each do |bookmark| %>
   src= '<%=bookmark.movie.poster_url%>'
 <% end %>
-  alt="Card image cap">
+  alt="Card image cap" mt-3>
   <div class="card-product-infos">
     <h2><%= link_to list.name,  list_path(list), style: 'color: gray;text-decoration:none;' %></h2>
   </div>
