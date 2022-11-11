@@ -5,6 +5,7 @@
 <% @lists.each do |list| %>
       <div class="card-product" data-tilt data-tilt-glare data-tilt-max-glare="0.8" scale:1>
           <%list.bookmarks.find do |bookmark| %>
+          <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill
           <img class="card-img-top" src=<%=bookmark.movie.poster_url%>  alt="Card image cap">
         <% end %>
         <h2 class ><%= link_to list.name,  list_path(list), style: 'color: gray;text-decoration:none;' %></h2>
