@@ -8,4 +8,6 @@ Rails.application.routes.draw do
     resources :bookmarks, only: %i[new create delete]
   end
 
+  root to: "lists#index"
+
 end
